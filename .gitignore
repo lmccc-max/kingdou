@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行产物
+logs/
+*.log
+*.pid
+shadow-router*.log
+idempotency.json
+kingdou-rate-limit.json
+
+# 本地配置（中央配置的模板要提交，本地覆盖用 *.local.json）
+configs/*.local.json
+configs/*.bak*
+*.local
+
+# 密钥
+.env
+.env.*
+!.env.example
+
+# 备份包
+kingdou_backup_*.tar.gz
+*.tar.gz
+!assets/*.tar.gz
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

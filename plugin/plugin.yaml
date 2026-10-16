@@ -1,0 +1,13 @@
+name: kingdou
+version: 1.0.0
+description: >-
+  Kingdou 计件工资系统网关前置路由。在飞书群消息进入 AI 之前先调用 kingdou skill 的
+  router（~/.hermes/skills/kingdou/scripts/router），命中并成功执行业务后拦截该消息，
+  避免脚本与 AI 重复回复。由 ENABLE_KINGDOU_GATEWAY_MODE 控制（execute / shadow / off）。
+author: kingdou local install
+kind: standalone
+platforms:
+  - linux
+  - macos
+provides_hooks:
+  - pre_gateway_dispatch
