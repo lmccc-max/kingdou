@@ -35,9 +35,20 @@ kingdou/
 ## 安装
 
 ```bash
-git clone <repo-url> kingdou && cd kingdou
-./install.sh                 # DRY_RUN=1 ./install.sh 只打印将要做什么
+# HTTPS（公开仓库，无需先配 SSH 密钥）
+git clone https://github.com/lmccc-max/kingdou.git kingdou && cd kingdou && ./install.sh
+
+# 或 SSH（已配好 GitHub 密钥时）
+git clone git@github.com:lmccc-max/kingdou.git kingdou && cd kingdou && ./install.sh
 ```
+
+只想看会做什么、不落盘：
+
+```bash
+git clone https://github.com/lmccc-max/kingdou.git kingdou && cd kingdou && DRY_RUN=1 ./install.sh
+```
+
+> 最后一步要重启网关，必须在**网关进程之外**的终端里执行（在 Hermes 会话里跑会被工具守卫拦下）。
 
 `install.sh` 做的事情：
 
